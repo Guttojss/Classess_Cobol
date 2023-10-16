@@ -1,0 +1,28 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. YOUR-PROGRAM-NAME.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       INPUT-OUTPUT SECTION.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       1 VETOR.
+       3 A PIC 999 OCCURS 5 TIMES.
+       77 I PIC 999 VALUE 1.
+       77 MAIOR PIC 999 VALUE 0.
+       77 MENOR PIC 999 VALUE 999.
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+            DISPLAY "INSIRA 5 NUMEROS"
+            PERFORM 5 TIMES
+            ACCEPT A(I)
+            IF A(I) > MAIOR
+                COMPUTE MAIOR=A(I)
+            IF A(I) < MENOR
+                COMPUTE MENOR=A(I)
+            COMPUTE I=I+ 1
+            END-PERFORM.
+            DISPLAY MENOR " MENOR"
+            DISPLAY MAIOR " MAIOR"
+            STOP RUN.
+       END PROGRAM YOUR-PROGRAM-NAME.
